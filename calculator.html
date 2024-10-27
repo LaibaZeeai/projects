@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>	
+	<style type="text/css">
+		.button {
+			height: 35px;
+			width: 35px;
+			border-radius: 100px;
+			background: greenyellow;
+			border-color: red;
+		}
+
+		.cal {
+			padding: 10px;
+			padding-top: 20px;
+			height: 230px;
+			width: 170px;
+			border: 3px solid black;
+			border-radius: 5px;
+			background: lightcyan;
+		}
+
+		input {
+			border-radius: 5px;
+			height: 30px;
+			border-color: black;
+			border-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="cal">
+		<input type="text" id="display">
+		<br><br>
+		<button onclick="clearInput('C')" class="button">C</button>
+		<button onclick="appendToDisplay('%')" class="button">%</button>
+		<button onclick="appendToDisplay('(')" class="button">(</button>
+		<button onclick="appendToDisplay(')')" class="button">)</button><br>
+		<button onclick="appendToDisplay('7')" class="button">7</button>
+		<button onclick="appendToDisplay('8')" class="button">8</button>
+		<button onclick="appendToDisplay('9')" class="button">9</button>
+		<button onclick="appendToDisplay('*')" class="button">*</button><br>
+		<button onclick="appendToDisplay('4')" class="button">4</button>
+		<button onclick="appendToDisplay('5')" class="button">5</button>
+		<button onclick="appendToDisplay('6')" class="button">6</button>
+		<button onclick="appendToDisplay('-')" class="button">-</button><br>
+		<button onclick="appendToDisplay('1')" class="button">1</button>
+		<button onclick="appendToDisplay('2')" class="button">2</button>
+		<button onclick="appendToDisplay('3')" class="button">3</button>
+		<button onclick="appendToDisplay('+')" class="button">+</button><br>
+		<button onclick="appendToDisplay('0')" class="button">0</button>
+		<button onclick="appendToDisplay('.')" class="button">.</button>
+		<button onclick="clearInput('AC')" class="button">AC</button>
+		<button onclick="evaluateExpression()" class="button">=</button>
+	</div>
+
+	<script>
+		function appendToDisplay(value) {
+			document.getElementById('display').value += value;
+		}
+
+		function clearInput(type) {
+			if (type === 'AC') {
+				document.getElementById('display').value = '';
+			} else if (type === 'C') {
+				var currentValue = document.getElementById('display').value;
+				document.getElementById('display').value = currentValue.slice(0, -1);
+			}
+		}
+
+		function evaluateExpression() {
+			document.getElementById('display').value = eval(document.getElementById('display').value);
+		}
+	</script>
+</body>
+</html>

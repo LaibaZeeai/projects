@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <script src="./DOMproject4.js" defer></script>
+    <link rel="stylesheet" href="DOMproject4.css">
+</head>
+<body bgcolor="brown">
+    <center><h1>Number Guessing Game</h1></center>
+    <div id="container">
+        <center>
+            <p>Try and guessing a random number between 1 and 100.</p>
+            <p>You have 10 attempts to guess the right number.</p>
+            <br>
+            <label id = "guess">Enter your guess: </label>
+            <br><br>
+            <input type="text" id="guessfield">
+            <br><br>
+            <div id="message"></div> 
+            <br><br>
+            <button class="button" id="submit">Submit</button>
+            <br><br><br>
+            <label class="font" id="Previous">Previous Guesses: </label>
+            <br><br>
+            <label class="font" id="Remaining">Remaining Guesses: </label>
+            <br><br>
+            <button class="button" id="Reset">Reset</button>
+            <button class="button" id="End">End Game</button>
+        </center>      
+    </div>
+</body>
+</html>

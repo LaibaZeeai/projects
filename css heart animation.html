@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ 	<meta charset="utf-8">
+ 	<meta name="">
+ 	<title>heart animation</title>
+ </head>
+
+ 	<style type="text/css">
+
+ 		.heart{
+ 			height:200px;
+ 			width:200px;
+ 			background-color: red;
+ 			transform:rotate(-45deg);
+ 			margin:100px;
+ 			animation-name: beat;
+ 			animation-duration: 0.5s;
+ 			animation-iteration-count: infinite;
+
+ 		}
+
+ 		.heart:before,
+ 		.heart:after{
+ 			content:"";
+ 			background-color: red;
+ 			position:absolute;
+ 			height:200px;
+ 			width:200px;
+ 			border-radius: 50%;
+ 		}
+
+ 		.heart:after{
+ 			left:100px;
+ 			top:0;	
+ 		}
+
+ 		.heart:before{
+ 			top:-100px;
+ 			left:0;	
+ 		}
+
+ 		@keyframes beat{
+ 			0%{
+ 				transform:scale(1.0) rotate(-45deg);
+ 			}
+
+ 			100%{
+ 				transform:scale(1.15) rotate(-45deg);
+ 			}
+
+ 			
+ 		}
+
+
+
+ 	</style>
+ 
+ <body>
+
+ 	<div class=heart></div>
+
+ </body>
+ </html>
+ 

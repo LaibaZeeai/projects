@@ -1,0 +1,24 @@
+#center{
+    margin:50px;
+    border-style:dashed;
+    padding: 50px;
+
+}
+
+#banner{
+     border-style:dashed;    
+     text-align: center;
+     background-color: lightcyan;
+     border-color: blue;
+     border-width: 5px;
+
+}
+
+#clock{
+    border-style:dashed;
+    width:140px;
+    height:30px;
+    padding-top: 15px; 
+    border-radius: 60px;
+    background-color: greenyellow;
+}
